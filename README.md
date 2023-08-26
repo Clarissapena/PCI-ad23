@@ -16,6 +16,12 @@ Algoritmo:
 Ingresar cada una de las actividades extracurriculares y distinguirlas según su área de conocimiento, horario y eje. 
 
 Segundo avance
+Avance 2
+Incorporando a tu proyecto libre operaciones con operadores
+Para poder involucrar estas operaciones dentro del proyecto se llevará a cabo una encuesta, por la cual los alumnos podrán tener una mejor idea de cuál es el área en la que deberían de participar. 
+Para esto se necesitara la operación de suma.
+
+Algoritmo:
 
 #Este es un ejemplo de como se usarían los operadores para hacer la encuesta
 
