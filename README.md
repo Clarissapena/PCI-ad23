@@ -14,3 +14,44 @@ Los objetivos de "Easily LiFE" son los siguientes:
 
 Algoritmo: 
 Ingresar cada una de las actividades extracurriculares y distinguirlas según su área de conocimiento, horario y eje. 
+
+Segundo avance
+
+#Este es un ejemplo de como se usarían los operadores para hacer la encuesta
+
+print("Qué es lo que más te gusta?")
+print("a) Jugar")
+print("b) Leer")
+print("c) Alguna idea")
+
+respuesta = input("Inserta tu respuesta: ")
+
+acumulador = 0
+
+if respuesta == "a":
+    acumulador = acumulador + 10
+elif respuesta == "b":
+    acumulador = acumulador + 20
+elif respuesta == "c":
+    acumulador = acumulador + 30
+
+print("Qué es lo que más te gusta comer?")
+print("a) pizza")
+print("b) hamburguesa")
+print("c) tacos")
+
+respuesta = input("Inserta tu respuesta: ")
+
+
+if respuesta == "a":
+    acumulador = acumulador + 10
+elif respuesta == "b":
+    acumulador = acumulador + 20
+elif respuesta == "c":
+    acumulador = acumulador + 30
+
+if acumulador == 20:
+    print(" Tu personalidad es extrovertida")
+elif acumulador >= 20:
+    print("Tu personalidad es introvertida")
+    
