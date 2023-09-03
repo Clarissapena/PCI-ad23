@@ -60,4 +60,36 @@ if acumulador == 20:
     print(" Tu personalidad es extrovertida")
 elif acumulador >= 20:
     print("Tu personalidad es introvertida")
+
+
+Avance 3
+#Este es un ejemplo de como se usarían las funciones dentro del proyecto
+a = 0
+b = 0 
+c = 0 
+
+print("¿Qué tipo de actividades prefieres durante tu tiempo libre?")
+print("a) Leer o escribir.")
+print("b) Escuchar música o podcasts.")
+print("c) Practicar deportes o actividades físicas.")
+
+respuesta1 = input("Escribe la letra de tu respuesta: ")
+
+def suma(respuesta1) :
+    if respuesta1 == "a":
+        a == a + 1
+    elif respuesta1 == "b":
+        b == b + 1
+    elif respuesta1 == "c":
+        c == c + 1
+    else :
+        print("Escriba una respuesta posible")
+    return a, b, c 
+
+if a>b and a>c:
+    print("Teatro podría ser una buena opción para ti.")
+if b>a and b>c:
+    print("Música podría ser una buena opción para ti.")
+if c>b and c>a:
+    print("Baile podría ser una buena opción para ti.")
     
