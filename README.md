@@ -21,48 +21,10 @@ Incorporando a tu proyecto libre operaciones con operadores
 Para poder involucrar estas operaciones dentro del proyecto se llevará a cabo una encuesta, por la cual los alumnos podrán tener una mejor idea de cuál es el área en la que deberían de participar. 
 Para esto se necesitara la operación de suma.
 
+Avance 4: Incorpora a tu proyecto libre estructuras de decisión
+
 Algoritmo:
 
-#Este es un ejemplo de como se usarían los operadores para hacer la encuesta
-
-print("Qué es lo que más te gusta?")
-print("a) Jugar")
-print("b) Leer")
-print("c) Alguna idea")
-
-respuesta = input("Inserta tu respuesta: ")
-
-acumulador = 0
-
-if respuesta == "a":
-    acumulador = acumulador + 10
-elif respuesta == "b":
-    acumulador = acumulador + 20
-elif respuesta == "c":
-    acumulador = acumulador + 30
-
-print("Qué es lo que más te gusta comer?")
-print("a) pizza")
-print("b) hamburguesa")
-print("c) tacos")
-
-respuesta = input("Inserta tu respuesta: ")
-
-
-if respuesta == "a":
-    acumulador = acumulador + 10
-elif respuesta == "b":
-    acumulador = acumulador + 20
-elif respuesta == "c":
-    acumulador = acumulador + 30
-
-if acumulador == 20:
-    print(" Tu personalidad es extrovertida")
-elif acumulador >= 20:
-    print("Tu personalidad es introvertida")
-
-
-Avance 3
 #Este es un ejemplo de como se usarían las funciones dentro del proyecto
 a = 0
 b = 0 
@@ -75,21 +37,117 @@ print("c) Practicar deportes o actividades físicas.")
 
 respuesta1 = input("Escribe la letra de tu respuesta: ")
 
-def suma(respuesta1) :
-    if respuesta1 == "a":
-        a == a + 1
-    elif respuesta1 == "b":
-        b == b + 1
-    elif respuesta1 == "c":
-        c == c + 1
+def suma(respuesta, a, b, c) :
+    if respuesta == "a":
+        a += 1  
+    elif respuesta == "b":
+        b += 1
+    elif respuesta == "c":
+        c += 1
     else :
         print("Escriba una respuesta posible")
-    return a, b, c 
+
+suma(respuesta1, a, b, c)
+
+print("¿Cómo te describirías en términos de sociabilidad?")
+print("a) Introvertid.")
+print("b) Ambivertido.")
+print("c) Extrovertido.")
+
+respuesta2 = input("Escribe la letra de tu respuesta: ")
+
+suma(respuesta2, a, b, c)
 
 if a>b and a>c:
-    print("Teatro podría ser una buena opción para ti.")
-if b>a and b>c:
+    print("Arte podría ser una buena opción para ti.")
+elif b>a and b>c:
     print("Música podría ser una buena opción para ti.")
-if c>b and c>a:
+elif c>b and c>a:
     print("Baile podría ser una buena opción para ti.")
-    
+
+print("!Muchas gracias por responder la encuesta!")
+
+
+
+#Aquí comienza el horario 
+
+horario = input("¿Quieres buscar un horario para tus clases? (Escribe SI / NO) ").lower()
+
+if horario == "si":
+    print("Vamos a realizar tu horario")
+
+    if a>b and a>c:
+        print("Las clases para ARTE disponible son:")
+        print("a. Teatro.")
+        print("b. Diseño.")
+        print("c. Dibujo")
+        selec_arte = (input("Selecciona la letra del curso en el que estás interesado: ")).lower()
+
+        if selec_arte == "a":
+            print("Los horarios disponible para TEATRO son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+        elif selec_arte == "b":
+            print("Los horarios disponible para DISEÑO son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+        elif selec_arte == "c":
+            print("Los horarios disponible para DIBUJO son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+
+    elif b>a and b>c:
+        print("Las clases para MÚSICA disponible son:")
+        print("a. Guitarra.")
+        print("b. Piano.")
+        print("c. Canto")
+        selec_music = (input("Selecciona la letra del curso en el que estás interesado: ")).lower()
+
+        if selec_music == "a":
+            print("Los horarios disponible para GUITARRA son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+        elif selec_music == "b":
+            print("Los horarios disponible para PIANO son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+        elif selec_music == "c":
+            print("Los horarios disponible para CANTO son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+
+    elif c>b and c>a:
+        print("Las clases para DEPORTE disponible son:")
+        print("a. Fútbol.")
+        print("b. Natación.")
+        print("c. Basket.")
+        selec_deport = (input("Selecciona la letra del curso en el que estás interesado: ")).lower()
+
+        if selec_deport == "a":
+            print("Los horarios disponible para GUITARRA son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+        elif selec_deport == "b":
+            print("Los horarios disponible para PIANO son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+        elif selec_deport == "c":
+            print("Los horarios disponible para CANTO son:")
+            print("a. 9:oo - 10:00 a.m.")
+            print("b. 11:oo - 12:00 a.m.")
+            print("c. 2:oo - 3:00 p.m.")
+
+
+else:
+    print("Gracias por participar")
+
+
+
