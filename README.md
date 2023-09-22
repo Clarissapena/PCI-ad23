@@ -15,54 +15,48 @@ Los objetivos de "Easily LiFE" son los siguientes:
 Algoritmo: 
 Ingresar cada una de las actividades extracurriculares y distinguirlas según su área de conocimiento, horario y eje. 
 
-Segundo avance
-Avance 2
-Incorporando a tu proyecto libre operaciones con operadores
-Para poder involucrar estas operaciones dentro del proyecto se llevará a cabo una encuesta, por la cual los alumnos podrán tener una mejor idea de cuál es el área en la que deberían de participar. 
-Para esto se necesitara la operación de suma.
 
-Avance 4: Incorpora a tu proyecto libre estructuras de decisión
+#Este es el avance del 22-09-23
+def obtener_respuesta(pregunta):
+    respuesta = input(pregunta + " Escribe la letra de tu respuesta: ")
+    while respuesta not in ("a", "b", "c"):
+        print("Respuesta no válida. Por favor, elige 'a', 'b' o 'c'.")
+        respuesta = input(pregunta + " Escribe la letra de tu respuesta: ")
+    return respuesta
 
-Algoritmo:
+def contar_respuestas(respuestas):
+    a = respuestas.count("a")
+    b = respuestas.count("b")
+    c = respuestas.count("c")
+    return a, b, c
 
-#Este es un ejemplo de como se usarían las funciones dentro del proyecto
-a = 0
-b = 0 
-c = 0 
+respuestas = []
 
 print("¿Qué tipo de actividades prefieres durante tu tiempo libre?")
 print("a) Leer o escribir.")
 print("b) Escuchar música o podcasts.")
 print("c) Practicar deportes o actividades físicas.")
 
-respuesta1 = input("Escribe la letra de tu respuesta: ")
+respuesta1 = obtener_respuesta("")
 
-def suma(respuesta, a, b, c) :
-    if respuesta == "a":
-        a += 1  
-    elif respuesta == "b":
-        b += 1
-    elif respuesta == "c":
-        c += 1
-    else :
-        print("Escriba una respuesta posible")
-
-suma(respuesta1, a, b, c)
+respuestas.append(respuesta1)
 
 print("¿Cómo te describirías en términos de sociabilidad?")
-print("a) Introvertid.")
+print("a) Introvertido.")
 print("b) Ambivertido.")
 print("c) Extrovertido.")
 
-respuesta2 = input("Escribe la letra de tu respuesta: ")
+respuesta2 = obtener_respuesta("")
 
-suma(respuesta2, a, b, c)
+respuestas.append(respuesta2)
 
-if a>b and a>c:
+a, b, c = contar_respuestas(respuestas)
+
+if a > b and a > c:
     print("Arte podría ser una buena opción para ti.")
-elif b>a and b>c:
+elif b > a and b > c:
     print("Música podría ser una buena opción para ti.")
-elif c>b and c>a:
+elif c > b and c > a:
     print("Baile podría ser una buena opción para ti.")
 
 print("!Muchas gracias por responder la encuesta!")
@@ -145,6 +139,9 @@ if horario == "si":
             print("b. 11:oo - 12:00 a.m.")
             print("c. 2:oo - 3:00 p.m.")
 
+
+else:
+    print("Gracias por participar")
 
 else:
     print("Gracias por participar")
