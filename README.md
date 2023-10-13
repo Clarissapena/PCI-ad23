@@ -27,3 +27,14 @@ Resultados de Búsqueda: Una lista de actividades que coinciden con los criterio
 
 Recomendaciones: Una lista de actividades recomendadas para el estudiante en función de sus preferencias y área de interés.
 
+Ejemplo de algoritmo: 
+Algoritmo para Buscar Actividades Extracurriculares por Área de Interés:
+1.	Iniciar el programa.
+2.	Solicitar al estudiante que ingrese su área de interés.
+3.	Leer y almacenar el área de interés ingresada por el estudiante.
+4.	Crear una lista para almacenar las actividades que coincidan con el área de interés del estudiante.
+5.	Recorrer cada actividad en la base de datos de actividades extracurriculares:
+6.	Mostrar las actividades encontradas:
+7.	Finalizar el programa.
+
+
