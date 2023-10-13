@@ -1,4 +1,4 @@
-#Este es el avance del 22-09-23
+#Este es el avance del 13-10-23
 def obtener_respuesta(pregunta):
     respuesta = input(pregunta + " Escribe la letra de tu respuesta: ")
     while respuesta not in ("a", "b", "c"):
@@ -52,75 +52,45 @@ horario = input("¿Quieres buscar un horario para tus clases? (Escribe SI / NO) 
 if horario == "si":
     print("Vamos a realizar tu horario")
 
-    if a>b and a>c:
-        print("Las clases para ARTE disponible son:")
-        print("a. Teatro.")
-        print("b. Diseño.")
-        print("c. Dibujo")
-        selec_arte = (input("Selecciona la letra del curso en el que estás interesado: ")).lower()
+    clases = ["a) ARTE", "b) MÚSICA", "c) DEPORTE"]
+    horarios = [
+        ["a) Teatro", "b) Diseño", "c) Dibujo"],
+        ["a) Guitarra", "b) Piano", "c) Canto"],
+        ["a) Fútbol", "b) Natación", "c) Basket"]
+    ]
 
-        if selec_arte == "a":
-            print("Los horarios disponible para TEATRO son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
-        elif selec_arte == "b":
-            print("Los horarios disponible para DISEÑO son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
-        elif selec_arte == "c":
-            print("Los horarios disponible para DIBUJO son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
+    horarios_disponibles = [
+        ["9:00 - 10:00 a.m.", "11:00 - 12:00 a.m.", "2:00 - 3:00 p.m."],
+        ["9:00 - 10:00 a.m.", "11:00 - 12:00 a.m.", "2:00 - 3:00 p.m."],
+        ["9:00 - 10:00 a.m.", "11:00 - 12:00 a.m.", "2:00 - 3:00 p.m."]
+    ]
 
-    elif b>a and b>c:
-        print("Las clases para MÚSICA disponible son:")
-        print("a. Guitarra.")
-        print("b. Piano.")
-        print("c. Canto")
-        selec_music = (input("Selecciona la letra del curso en el que estás interesado: ")).lower()
+    for i, categoria in enumerate(clases):
+        print(f"Clases de {categoria} disponibles.")
+    
+    seleccion_categoria = input("Selecciona la letra de la categoría en la que estás interesado: ").lower()
+    indice_categoria = ord(seleccion_categoria) - ord("a")
 
-        if selec_music == "a":
-            print("Los horarios disponible para GUITARRA son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
-        elif selec_music == "b":
-            print("Los horarios disponible para PIANO son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
-        elif selec_music == "c":
-            print("Los horarios disponible para CANTO son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
+    if 0 <= indice_categoria < len(clases):
+        categoria_seleccionada = clases[indice_categoria]
 
-    elif c>b and c>a:
-        print("Las clases para DEPORTE disponible son:")
-        print("a. Fútbol.")
-        print("b. Natación.")
-        print("c. Basket.")
-        selec_deport = (input("Selecciona la letra del curso en el que estás interesado: ")).lower()
+        print(f"Las clases para {categoria_seleccionada} disponibles son:")
+        for i, clase in enumerate(horarios[indice_categoria]):
+            print(f"{clase}")
 
-        if selec_deport == "a":
-            print("Los horarios disponible para GUITARRA son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
-        elif selec_deport == "b":
-            print("Los horarios disponible para PIANO son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
-        elif selec_deport == "c":
-            print("Los horarios disponible para CANTO son:")
-            print("a. 9:oo - 10:00 a.m.")
-            print("b. 11:oo - 12:00 a.m.")
-            print("c. 2:oo - 3:00 p.m.")
+        seleccion_clase = input("Selecciona la letra del curso en el que estás interesado: ").lower()
+        indice_clase = ord(seleccion_clase) - ord("a")
 
+        if 0 <= indice_clase < len(horarios[indice_categoria]):
+            clase_seleccionada = horarios[indice_categoria][indice_clase]
+
+            print(f"Los horarios disponibles para {clase_seleccionada} son:")
+            for i, horario in enumerate(horarios_disponibles[indice_categoria]):
+                print(f"{horario}")
+        else:
+            print("Selección de curso no válida.")
+    else:
+        print("Selección de categoría no válida.")
 
 else:
     print("Gracias por participar")
